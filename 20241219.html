@@ -1,0 +1,335 @@
+<!-- 文件類型 -->
+<!DOCTYPE html>
+<!-- html 開始 -->
+<html lang="en">
+    <!-- 頭部 -->
+    <head>
+        <!-- 編碼 -->
+        <meta charset="UTF-8" />
+        <!-- 視口 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 標題，會顯示在瀏覽器分頁上，搜尋結果， -->
+        <title>大偉哥的網站</title>
+        <!-- <meta name="description" content="大偉哥的網站" /> -->
+    </head>
+    <!-- 主體，會顯示在瀏覽器內容 -->
+    <body>
+        ABC
+        <!-- 占據一整行 -->
+        <!-- display: block; -->
+        <!-- 無語意的標籤 -->
+        <div style="background-color: red">區塊標籤</div>
+        <div>第二區塊</div>
+
+        <!-- 用多少算多少，不會占據一整行 -->
+        <!-- display: inline; -->
+        <!-- 無語意的標籤 -->
+        <span style="background-color: yellow">行內標籤</span>
+        <span>行內標籤2</span>
+
+        <!-- div 的延伸 -->
+        <header></header>
+        <main></main>
+        <footer></footer>
+        <article></article>
+        <section></section>
+
+        <!-- 商品卡片範例 -->
+        <div style="display: none; gap: 20px; justify-content: center">
+            <!-- 左側原始卡片 -->
+            <div class="product-card">
+                <img src="https://picsum.photos/200/300" alt="商品圖片" />
+                <div class="product-info">
+                    <div>商品名稱: 123</div>
+                    <div>商品描述: AAAA</div>
+                    <div>商品價格: 1000元</div>
+                    <div>
+                        Tag: <span>冬季</span><span>下殺</span><span>男裝</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右側美化卡片 -->
+            <div
+                class="product-card"
+                style="
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    padding: 16px;
+                    max-width: 300px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                "
+            >
+                <img
+                    src="https://picsum.photos/200/300"
+                    alt="商品圖片"
+                    style="width: 100%; border-radius: 4px"
+                />
+                <div class="product-info" style="margin-top: 12px">
+                    <div
+                        style="
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin-bottom: 8px;
+                        "
+                    >
+                        商品名稱: 123
+                    </div>
+                    <div style="color: #666; margin-bottom: 8px">
+                        商品描述: AAAA
+                    </div>
+                    <div
+                        style="
+                            color: #e53e3e;
+                            font-size: 16px;
+                            margin-bottom: 8px;
+                        "
+                    >
+                        商品價格: 1000元
+                    </div>
+                    <div>
+                        Tag:
+                        <span
+                            style="
+                                background: #f0f0f0;
+                                padding: 4px 8px;
+                                border-radius: 4px;
+                                margin-right: 4px;
+                            "
+                            >冬季</span
+                        ><span
+                            style="
+                                background: #f0f0f0;
+                                padding: 4px 8px;
+                                border-radius: 4px;
+                                margin-right: 4px;
+                            "
+                            >下殺</span
+                        ><span
+                            style="
+                                background: #f0f0f0;
+                                padding: 4px 8px;
+                                border-radius: 4px;
+                            "
+                            >男裝</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- h1 一個頁面只會出現一次 -->
+        <h1>標題1</h1>
+        <h2>標題2</h2>
+        <h3>標題3</h3>
+        <h4>標題4</h4>
+        <h5>標題5</h5>
+        <h6>標題6</h6>
+
+        <!-- 使用標籤預設樣式影響結構 -->
+        <h1>這是我的標題</h1>
+        <div>
+            一段內容，這個
+            <h2>很重要</h2>
+            其他的都不是很重要
+        </div>
+
+        <h1>這是我的標題</h1>
+        <div>一段內容，這個很重要其他的都不是很重要</div>
+
+        <h1>這是我的標題</h1>
+        <div>
+            一段內容，這個<span
+                style="font-weight: bold; color: red; font-size: 40px"
+                >很重要</span
+            >其他的都不是很重要
+        </div>
+
+        <!-- 預設樣式可複寫 -->
+        <h1>標題1</h1>
+        <h2>標題2</h2>
+        <h3>標題3</h3>
+        <h4>標題4</h4>
+        <h5>標題5</h5>
+        <h6 style="font-size: 100px">標題6</h6>
+
+        <!-- 段落不可作為顯示高度使用 -->
+        <p>段落1</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>段落2</p>
+
+        <!-- p 不可包 div -->
+        <p>
+            <!-- <div>XXXX</div> -->
+        </p>
+
+        <!-- 合理的結構 -->
+        <div class="article">
+            <h1>標題1</h1>
+            <div class="content">
+                <p>段落1</p>
+                <p>段落2</p>
+                <p>段落3</p>
+                <p>段落4</p>
+            </div>
+        </div>
+
+        <h1>這是我的標題</h1>
+        <!-- 強調很重要, em 預設為斜體 -->
+        <div>一段內容，這個<em>很重要</em>其他的都不是很重要</div>
+
+        <h1>這是我的標題</h1>
+        <!-- 強調很重要, strong 預設為粗體 -->
+        <div>一段內容，這個<strong>很重要</strong>其他的都不是很重要</div>
+
+        <p>
+            中部辦公室: 台中市西屯區台灣大道四段179號15樓
+            <br />
+            <!-- 換行不可用於顯示高度距離 -->
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            北部辦公室: 台北市信義區松仁路3號10樓
+            <br />
+            南部辦公室: 高雄市苓雅區成功路123號20樓
+        </p>
+
+        <h1>第一章</h1>
+        <div>
+            <p>這是第一節的內容</p>
+        </div>
+
+        <!-- 分隔線，可使用於分隔內容 -->
+        <hr />
+
+        <h1>第二章</h1>
+        <div>
+            <p>這是第二節的內容</p>
+        </div>
+
+        <hr />
+
+        <h1>第三章</h1>
+        <div>
+            <p>這是第三節的內容</p>
+        </div>
+
+        <!-- 無序列表 -->
+        <ul>
+            <li>第二項</li>
+            <li>第一項</li>
+            <li>第三項</li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://www.tuk.com.tw/"><span>首頁</span></a>
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/shop/"><span>購買商品</span></a>
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/info/"
+                    ><span>媒體文章分享</span></a
+                >
+            </li>
+            <li>
+                <a href="#"><span>影音學習專區</span></a>
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/tuk-show-room/"
+                    ><span>展示點資訊</span></a
+                >
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/customer-case-sharing/"
+                    ><span>客戶裝機實例</span></a
+                >
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/vip/"><span>會員</span></a>
+            </li>
+        </ul>
+
+        <ul style="display: flex; list-style: none">
+            <li>
+                <a href="https://www.tuk.com.tw/"><span>首頁</span></a> /
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/shop/"><span>購買商品</span></a>
+                /
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/info/"
+                    ><span>媒體文章分享</span></a
+                >
+                /
+            </li>
+            <li>
+                <a href="#"><span>影音學習專區</span></a> /
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/tuk-show-room/"
+                    ><span>展示點資訊</span></a
+                >
+                /
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/customer-case-sharing/"
+                    ><span>客戶裝機實例</span></a
+                >
+                /
+            </li>
+            <li>
+                <a href="https://www.tuk.com.tw/vip/"><span>會員</span></a>
+            </li>
+        </ul>
+
+        <!-- 有序列表 -->
+        <h1>XX食譜</h1>
+        <ol>
+            <li>準備材料</li>
+            <li>混和材料</li>
+            <li>下鍋</li>
+            <li>調味</li>
+            <li>上桌</li>
+        </ol>
+
+        <h1>XX食譜</h1>
+        <ol type="a">
+            <li>準備材料</li>
+            <li>混和材料</li>
+            <li>下鍋</li>
+            <li>調味</li>
+            <li>上桌</li>
+        </ol>
+
+        <h1>XX食譜</h1>
+        <ol type="A" start="3">
+            <li>準備材料</li>
+            <li>混和材料</li>
+            <li>下鍋</li>
+            <li>調味</li>
+            <li>上桌</li>
+        </ol>
+
+        <!-- 定義列表 -->
+        <dl>
+            <!--  定義 -->
+            <dt>定義</dt>
+            <!-- 定義的內容 -->
+            <dd>定義的內容</dd>
+            <!-- 定義的內容可以多項 -->
+            <dd>定義的內容2</dd>
+            <dt>網路協定</dt>
+            <dd>HTTP</dd>
+            <dd>HTTPS</dd>
+            <dd>FTP</dd>
+        </dl>
+    </body>
+</html>
