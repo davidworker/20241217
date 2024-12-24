@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>20241224</title>
+        <style>
+            body {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>20241224</h1>
+        <h2>圖片</h2>
+        <hr />
+        <!-- img 無內容，不需要關閉 -->
+        <!-- src 圖片路徑，類型有 jpg、png、gif、svg -->
+        <!-- alt 圖片描述，如果圖片無法顯示，會顯示 alt 的文字 -->
+        <img
+            src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            alt="Google Logo"
+        />
+
+        <!-- . 代表當前位置 -->
+        <!-- ./ 代表當前目錄 -->
+        <!-- / 代表目錄 -->
+        <!-- ../ 代表上一層目錄 -->
+        <img src="./assets/images/cat.jpg" alt="一隻貓" />
+
+        <img src="./assets/images/green_water.webp" alt="綠色水" />
+
+        <h2>音訊</h2>
+        <hr />
+        <!-- mp3、ogg、wav -->
+        <!-- controls 控制播放 -->
+        <!-- loop 循環播放 -->
+        <!-- preload 預先載入 -->
+        <!-- autoplay 自動播放 -->
+        <!-- muted 靜音 -->
+        <audio controls loop preload>
+            <!-- src 音訊路徑 -->
+            <!-- type 音訊類型 -->
+            <source src="./assets/resource/m.mp3" type="audio/mp3" />
+            <!-- <source src="./assets/resource/slowlife.ogg" type="audio/ogg">
+        <source src="./assets/resource/slowlife.wav" type="audio/wav"> -->
+        </audio>
+
+        <h2>影片</h2>
+        <hr />
+        <!-- mp4、webm、ogg -->
+        <!-- controls 控制播放 -->
+        <!-- loop 循環播放 -->
+        <!-- preload 預先載入 -->
+        <!-- autoplay 自動播放，須設定 muted 才會自動播放 -->
+        <!-- muted 靜音 -->
+        <video controls loop preload>
+            <source src="./assets/resource/road.mp4" type="video/mp4" />
+        </video>
+
+        <h2>iframe</h2>
+        <hr />
+        <!-- 嵌入外部網站 -->
+        <!-- CSP 限制https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <iframe
+            src="https://www.google.com"
+            width="600"
+            height="400"
+            frameborder="0"
+        ></iframe>
+    </body>
+</html>
