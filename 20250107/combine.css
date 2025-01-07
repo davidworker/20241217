@@ -1,0 +1,32 @@
+a {
+    color: inherit;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav li {
+    background-color: #f5a623;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.nav > li {
+    color: red;
+}
+
+.items .item {
+    margin-bottom: 20px;
+    background-color: #f5a623;
+    line-height: 30px;
+}
+
+.items .item + .only {
+    color: red;
+}
+
+.items .item ~ .all {
+    background-color: blue;
+    color: white;
+}

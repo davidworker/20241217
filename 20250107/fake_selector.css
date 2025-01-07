@@ -1,0 +1,65 @@
+.btn {
+    border: 0;
+    background-color: #3043f3;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #dd2078;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.student-table th,
+.student-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* 表頭樣式 */
+.student-table thead th {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* 奇數行樣式 */
+.student-table tbody tr:nth-child(odd) {
+    background-color: #e47d7d;
+}
+
+/* 偶數行樣式 */
+.student-table tbody tr:nth-child(even) {
+    background-color: #6cb0fd;
+}
+
+/* 滑鼠懸停效果 */
+.student-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.fullname::before {
+    content: ""; /* 必須有 */
+    width: 30px;
+    height: 30px;
+    background-image: url(./images/icon_favorite.png);
+    background-size: cover;
+    display: inline-block;
+}
+
+.fullname::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: rgb(255, 72, 0);
+    display: inline-block;
+}

@@ -1,0 +1,57 @@
+.text {
+    font-size: 20px; /* 文字大小 */
+    /* 文字粗細 100,200,300,400,500,600,700,800,900, bold, lighter, normal, bolder */
+    font-weight: bold;
+}
+
+.title {
+    font-family: "Noto Sans TC", serif;
+    font-size: 30px;
+    font-weight: 600;
+
+    /* 使用顏色名稱 */
+    color: #000000;
+
+    /* 水平對齊，預設為 left，可用值有 left, right, center */
+    text-align: center;
+}
+
+.title {
+    background-color: #d61515;
+    /* 線性漸層背景 - 從上到下 */
+    background: linear-gradient(#d61515, #ffffff);
+    /* 也可以設定漸層方向和多個顏色 */
+    background: linear-gradient(to right, #d61515, #f5a623, #ffffff);
+    background: linear-gradient(45deg, #d61515, #ffffff);
+}
+
+.title {
+    height: 100px;
+    /* 垂直置中 */
+    line-height: 100px;
+}
+
+.article {
+    line-height: 30px;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.nav li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(./images/icon_favorite.png);
+    background-size: cover;
+}

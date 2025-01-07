@@ -1,0 +1,40 @@
+.outside {
+    background: #dedede;
+    color: #c93232;
+    padding: 10px;
+    margin: 10px;
+}
+
+.student-score {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.score {
+    text-align: right;
+}
+
+/* 表示 html 內有一個標籤屬性 class 為 <div class="student-table"></div> */
+.student-table {
+    background: #dedede;
+    color: #c93232;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* 表示 html 內有一個標籤屬性 id 為 <div id="account"></div> */
+#account {
+}
+
+/* 表示 html 內所有 div 標籤 */
+/* 不要使用此方式 */
+div {
+    font-size: 100px;
+}
+
+.selector {
+    background: #dedede;
+    color: #c93232;
+    padding: 10px;
+    margin: 10px;
+}
