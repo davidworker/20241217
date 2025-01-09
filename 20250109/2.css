@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.box {
+    /* 定義內容寬度 */
+    width: 200px;
+    /* 定義內容高度 */
+    height: 200px;
+    background-color: rgb(214, 214, 214);
+    /* 數值順序不一定要照此順序 */
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+.border-mode {
+    /* 定義邊框內的寬度 */
+    width: 200px;
+    /* 定義邊框內的高度 */
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.box-202 {
+    background-color: red;
+}
+
+.box-242 {
+    padding: 100px;
+}
+
+.box-282 {
+    padding: 20px;
+    margin: 20px;
+    background-color: blue;
+    color: white;
+}
+
+.box-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box-margin-1 {
+    margin: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    /* 10px 為 top, bottom
+       20px 為 left, right */
+    margin: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    /* 10px 為 top
+       20px 為 right
+       30px 為 bottom
+       40px 為 left */
+    margin: 10px 20px 30px 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+.box-padding-1 {
+    padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    /* 10px 為 top, bottom
+       20px 為 left, right */
+    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* 10px 為 top
+       20px 為 right
+       30px 為 bottom
+       40px 為 left */
+    padding: 10px 20px 30px 40px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}
+
+.box1 {
+    border-width: 10px;
+    /* solid, dashed, dotted, double, groove, ridge, inset, outset */
+    /* 常用 solid, dashed, dotted */
+    border-style: solid;
+    border-color: rgb(224, 191, 191);
+}

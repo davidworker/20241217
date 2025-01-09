@@ -1,0 +1,20 @@
+p {
+    color: black; /* 1 */
+}
+
+.text {
+    color: blue; /* 10 */
+}
+
+.text.highlight {
+    color: green; /* 10 + 10 = 20 */
+}
+
+#container p {
+    color: red; /* 100 + 1 = 101 */
+}
+
+#special {
+    /* 100 */
+    color: orange !important; /* 最高優先權 */
+}

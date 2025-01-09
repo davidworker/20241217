@@ -1,0 +1,48 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+
+.relative {
+    position: relative;
+    background-color: rgb(255, 111, 111);
+    top: 100px;
+    left: 100px;
+}
+
+.absolute {
+    position: absolute;
+    background-color: rgb(111, 111, 255);
+    top: 100px;
+    left: 100px;
+    opacity: 0.8;
+}
+
+.p3-css {
+    background: red;
+    height: 300px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+}
+
+.p3-css p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.fixed {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    background-color: rgb(189, 128, 16);
+    opacity: 0.5;
+}

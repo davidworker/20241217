@@ -1,0 +1,29 @@
+/* 全域變數設定 */
+:root {
+    --popup-width: 300px;
+    --popup-height: 300px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.popup__wrap {
+    /* 區域定義變數 */
+    --popup-width: 300px;
+    --popup-height: 300px;
+    position: absolute;
+    width: var(--popup-width);
+    height: var(--popup-height);
+    /* 使用變數計算中心點位置 */
+    top: calc(50% - (var(--popup-height) / 2));
+    left: calc(50% - (var(--popup-width) / 2));
+    background: #fff;
+    color: #000;
+}
