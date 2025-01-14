@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Demo</title>
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="product">
+                <img
+                    src="https://picsum.photos/300/200/?random=1"
+                    alt="產品圖片"
+                />
+                <h2>產品標題 1</h2>
+                <p>產品描述文字，可以是多行的內容說明。</p>
+                <button>購買</button>
+            </div>
+            <div class="product">
+                <img
+                    src="https://picsum.photos/300/200/?random=2"
+                    alt="產品圖片"
+                />
+                <h2>產品標題 2</h2>
+                <p>產品描述文字，可以是多行的內容說明。</p>
+                <button>購買</button>
+            </div>
+            <div class="product">
+                <img
+                    src="https://picsum.photos/300/200/?random=3"
+                    alt="產品圖片"
+                />
+                <h2>產品標題 3</h2>
+                <p>產品描述文字，可以是多行的內容說明。</p>
+                <button>購買</button>
+            </div>
+        </div>
+
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .product {
+                flex: 1;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .product img {
+                width: 100%;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+
+            .product h2 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .product p {
+                color: #666;
+                margin-bottom: 15px;
+            }
+
+            .product button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 8px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .product button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </body>
+</html>

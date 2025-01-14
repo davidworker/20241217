@@ -1,0 +1,49 @@
+body {
+    background-color: #f5f5f5;
+}
+
+.font__tc {
+    font-family: "Noto Sans TC", serif;
+}
+
+.top__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.top__menu__contact {
+    display: flex;
+    gap: 20px;
+}
+
+.top__menu__contact a {
+    display: block;
+    position: relative;
+}
+
+.top__menu__contact li a::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+}
+
+.top__menu__contact li:last-child a::after {
+    content: "";
+}
+
+.header {
+    background: #ffffff;
+    height: 80px;
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}

@@ -1,0 +1,84 @@
+.flex__wrap {
+    /* 預設是 block 元素 */
+    display: flex;
+    /* 預設是 inline 元素 */
+    /* display: inline-flex; */
+}
+
+/* 預設，左到右 */
+.flex__direction--row {
+    flex-direction: row;
+}
+
+/* 反向，右到左 */
+.flex__direction--row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* 垂直，上到下 */
+.flex__direction--column {
+    flex-direction: column;
+}
+
+/* 反向垂直，下到上 */
+.flex__direction--column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* 間距 */
+.flex__gap {
+    gap: 20px;
+}
+
+/* 不換行，預設 */
+.flex__wrap--nowrap {
+    flex-wrap: nowrap;
+}
+
+/* 換行 */
+.flex__wrap--wrap {
+    flex-wrap: wrap;
+}
+
+/* 水平置左 */
+.flex__justify--start {
+    /* text-align: left; */
+    justify-content: flex-start;
+}
+
+/* 水平置中 */
+.flex__justify--center {
+    /* text-align: center; */
+    justify-content: center;
+}
+
+/* 水平置右 */
+.flex__justify--end {
+    /* text-align: right; */
+    justify-content: flex-end;
+}
+
+/* 水平貼齊起點與終點後，平均分布*/
+.flex__justify--space-between {
+    justify-content: space-between;
+}
+
+/* 垂直置頂 */
+.flex__align--top {
+    align-items: flex-start;
+}
+
+/* 垂直置中 */
+.flex__align--center {
+    align-items: center;
+}
+
+/* 垂直置底 */
+.flex__align--bottom {
+    align-items: flex-end;
+}
+
+.item {
+    padding: 20px;
+    border: 1px solid #000;
+}
