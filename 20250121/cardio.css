@@ -363,18 +363,13 @@ body {
     transition: max-height 0.3s ease-out;
 }
 
-#mobile__header__menu__sub__product:checked
-    ~ #mobile__header__menu__sub__product__wrap {
-    max-height: 500px;
-}
-
-#mobile__header__menu__sub__product:checked
+.mobile__header__menu__sub__trigger:checked
     + li.mobile__header__menu__sub__list
     > label {
     background-color: #ff3d3d;
 }
 
-#mobile__header__menu__sub__product:checked
+.mobile__header__menu__sub__trigger:checked
     + li.mobile__header__menu__sub__list
     > label
     img {
@@ -384,6 +379,13 @@ body {
 
 .mobile__header__menu__sub__trigger {
     display: none;
+}
+
+.mobile__header__menu__sub__trigger:checked
+    ~ #mobile__header__menu__sub__product__wrap,
+.mobile__header__menu__sub__trigger:checked
+    ~ #mobile__header__menu__sub__news__wrap {
+    max-height: 500px;
 }
 
 @media screen and (max-width: 910px) {
