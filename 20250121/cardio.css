@@ -285,6 +285,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
 }
 
 .mobile__header__menu__search__icon {
@@ -302,12 +303,50 @@ body {
     padding: 0 20px;
     padding-right: 50px;
     background-color: transparent;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
 .mobile__header__menu__search__input::placeholder {
     color: #646464;
+}
+
+.mobile__header__menu__list {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.mobile__header__menu__list > li {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-bottom: 1px solid #c5c5c5;
+    position: relative;
+}
+
+.mobile__header__menu__list > li > label {
+    cursor: pointer;
+    width: 50px;
+    border-left: 1px solid #c5c5c5;
+    display: none;
+}
+
+.mobile__header__menu__list > li.mobile__header__menu__sub__list > label {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.mobile__header__menu__list > li.mobile__header__menu__sub__list > label:hover {
+    background-color: #ff3d3d;
+}
+
+.mobile__header__menu__list img {
+    max-width: 50%;
 }
 
 @media screen and (max-width: 910px) {
