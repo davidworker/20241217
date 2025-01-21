@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cardio.com.tw</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="cardio.css" />
+    </head>
+    <body>
+        <input type="checkbox" id="search_trigger" />
+
+        <div class="container">
+            <div class="top__menu">
+                <div>
+                    <ul class="top__menu__contact">
+                        <li>
+                            <a href="#">(02) 8797 3985</a>
+                        </li>
+                        <li>
+                            <a href="#">cardio8@ms46.hinet.net</a>
+                        </li>
+                    </ul>
+                </div>
+                <div></div>
+                <div>
+                    <ul class="top__menu__contact">
+                        <li>
+                            <a href="#">FB</a>
+                        </li>
+                        <li>
+                            <a href="#">YOUTUBE</a>
+                        </li>
+                        <li>
+                            <a href="#">IG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <div class="mobile__header__menu__icon">
+                        <label for="mobile__header__menu__trigger">
+                            <img
+                                src="./images/icon_menu.png"
+                                alt="mobile menu icon"
+                            />
+                        </label>
+                    </div>
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./images/logo.svg" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="header__menu font__tc">
+                        <ul class="header__menu__list">
+                            <li>
+                                <a href="#">關於CARDIO</a>
+                            </li>
+                            <li class="header__menu__sub__list">
+                                <a href="#">產品資訊</a>
+                                <div class="header__menu__sub__wrap">
+                                    <ul class="header__menu__sub">
+                                        <li><a href="#">產品類別一</a></li>
+                                        <li><a href="#">產品類別二</a></li>
+                                        <li><a href="#">產品類別三</a></li>
+                                        <li><a href="#">產品類別四</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__menu__sub__list">
+                                <a href="#">最新消息</a>
+                                <div class="header__menu__sub__wrap">
+                                    <ul class="header__menu__sub">
+                                        <li><a href="#">產品類別一</a></li>
+                                        <li><a href="#">產品類別二</a></li>
+                                        <li><a href="#">產品類別三</a></li>
+                                        <li><a href="#">產品類別四</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__menu__sub__list">
+                                <a href="#">車用百科</a>
+                            </li>
+                            <li class="header__menu__sub__list">
+                                <a href="#">影音專區</a>
+                            </li>
+                            <li class="header__menu__sub__list">
+                                <a href="#">常見問題</a>
+                            </li>
+                            <li>
+                                <a href="#">經銷據點</a>
+                            </li>
+                            <li class="header__menu__sub__list">
+                                <a href="#">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__search">
+                        <label
+                            for="search_trigger"
+                            class="search__trigger__label"
+                        >
+                            <img
+                                src="./images/icon_search.png"
+                                alt="search"
+                                class="search__icon__open"
+                            />
+                            <img
+                                src="./images/icon_close.png"
+                                alt="search close"
+                                class="search__icon__close"
+                            />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search__condition__wrap">
+            <div class="search__condition__content">
+                <input
+                    type="text"
+                    class="search__condition__input"
+                    placeholder="搜尋產品"
+                />
+                <label for="search_trigger" class="search__condition__close">
+                    <img src="./images/icon_close.png" alt="search close"
+                /></label>
+            </div>
+            <div class="search__condition__description">
+                請輸入您要找的商品名稱......
+            </div>
+        </div>
+
+        <input type="checkbox" id="mobile__header__menu__trigger" />
+        <div class="mobile__header__menu__wrap">
+            <div class="mobile__header__menu__content">
+                <div class="mobile__header__menu__search">
+                    <input
+                        type="text"
+                        placeholder="搜尋產品"
+                        class="mobile__header__menu__search__input"
+                    />
+                    <img
+                        src="./images/icon_search.png"
+                        alt="search"
+                        class="mobile__header__menu__search__icon"
+                    />
+                </div>
+            </div>
+        </div>
+        <label
+            for="mobile__header__menu__trigger"
+            class="mobile__header__menu__close"
+        ></label>
+    </body>
+</html>
