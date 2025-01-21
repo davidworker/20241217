@@ -316,7 +316,7 @@ body {
     font-size: 0.9rem;
 }
 
-.mobile__header__menu__list > li {
+.mobile__header__menu__list li {
     display: flex;
     height: 50px;
     align-items: center;
@@ -345,8 +345,45 @@ body {
     background-color: #ff3d3d;
 }
 
+.mobile__header__menu__list
+    > li.mobile__header__menu__sub__list
+    > label:hover
+    img {
+    filter: brightness(0) invert(1);
+}
+
 .mobile__header__menu__list img {
     max-width: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile__header__menu__sub__wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobile__header__menu__sub__product:checked
+    ~ #mobile__header__menu__sub__product__wrap {
+    max-height: 500px;
+}
+
+#mobile__header__menu__sub__product:checked
+    + li.mobile__header__menu__sub__list
+    > label {
+    background-color: #ff3d3d;
+}
+
+#mobile__header__menu__sub__product:checked
+    + li.mobile__header__menu__sub__list
+    > label
+    img {
+    transform: rotate(90deg);
+    filter: brightness(0) invert(1);
+}
+
+.mobile__header__menu__sub__trigger {
+    display: none;
 }
 
 @media screen and (max-width: 910px) {
