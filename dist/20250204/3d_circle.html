@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS 3D 球體展示</title>
+        <link rel="stylesheet" href="base.css" />
+        <style>
+            .scene {
+                width: 300px;
+                height: 300px;
+                margin: 100px auto;
+                perspective: 1200px;
+            }
+
+            .sphere-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                animation: rotate 15s infinite linear;
+            }
+
+            .ring {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform-style: preserve-3d;
+            }
+
+            .sphere-item {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: linear-gradient(45deg, #4a90e2, #67a6e6);
+                border-radius: 50%;
+                transform-origin: 0 0;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotateX(-20deg) rotateY(0);
+                }
+                to {
+                    transform: rotateX(-20deg) rotateY(360deg);
+                }
+            }
+
+            .description {
+                text-align: center;
+                margin: 2rem 0;
+                color: #333;
+            }
+
+            /* 控制按鈕 */
+            .controls {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .controls button {
+                padding: 8px 16px;
+                margin: 0 10px;
+                cursor: pointer;
+                background: #4caf50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                transition: background 0.3s;
+            }
+
+            .controls button:hover {
+                background: #45a049;
+            }
+
+            /* 暫停時的樣式 */
+            .sphere-container.paused {
+                animation-play-state: paused !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="description">
+            <h1>CSS 3D 球體展示</h1>
+            <p>使用 CSS Transform 製作的 3D 球體結構</p>
+        </div>
+
+        <div class="scene">
+            <div class="sphere-container" id="sphere"></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="toggleRotation()">播放/暫停</button>
+            <button onclick="changeDirection()">改變方向</button>
+        </div>
+
+        <script>
+            const sphere = document.getElementById("sphere");
+            const radius = 120; // 球體半徑
+            const rings = 12; // 緯度圈數
+            const segments = 24; // 每個圈上的點數
+
+            // 創建球體
+            for (let ring = 0; ring < rings; ring++) {
+                const ringContainer = document.createElement("div");
+                ringContainer.className = "ring";
+
+                // 計算當前圈的緯度角度
+                const phi = (Math.PI * ring) / (rings - 1);
+                const ringRadius = radius * Math.sin(phi);
+                const y = radius * Math.cos(phi);
+
+                // 在當前圈上創建點
+                for (let segment = 0; segment < segments; segment++) {
+                    const theta = (2 * Math.PI * segment) / segments;
+                    const x = ringRadius * Math.cos(theta);
+                    const z = ringRadius * Math.sin(theta);
+
+                    const item = document.createElement("div");
+                    item.className = "sphere-item";
+
+                    // 根據位置調整點的顏色和透明度
+                    const brightness = Math.abs(y) / radius;
+                    const alpha = 0.6 + 0.4 * (1 - brightness);
+                    item.style.background = `linear-gradient(45deg, 
+                        rgba(74, 144, 226, ${alpha}), 
+                        rgba(103, 166, 230, ${alpha}))`;
+
+                    // 設置點的 3D 位置
+                    item.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+                    ringContainer.appendChild(item);
+                }
+
+                sphere.appendChild(ringContainer);
+            }
+
+            let isClockwise = true;
+
+            function toggleRotation() {
+                if (sphere.classList.contains("paused")) {
+                    sphere.classList.remove("paused");
+                    sphere.style.animationPlayState = "running";
+                } else {
+                    sphere.classList.add("paused");
+                    sphere.style.animationPlayState = "paused";
+                }
+            }
+
+            function changeDirection() {
+                isClockwise = !isClockwise;
+                sphere.style.animation = `rotate 15s infinite ${
+                    isClockwise ? "" : "reverse"
+                } linear ${
+                    sphere.classList.contains("paused") ? "paused" : "running"
+                }`;
+            }
+        </script>
+    </body>
+</html>
