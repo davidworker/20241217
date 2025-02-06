@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap Modal</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Modal 對話框教學</h1>
+            <hr />
+            <div>
+                Modal
+                對話框是一種常見的網頁互動元件，用於顯示重要資訊或需要用戶確認的內容。它會在頁面上方彈出一個視窗，暫時阻擋用戶與主頁面的互動，直到用戶完成操作或關閉視窗。這種設計可以有效引導用戶注意力，適合用於登入表單、警告提示、詳細資訊展示等場景。透過
+                Bootstrap 框架，我們可以輕鬆實現美觀且具有響應式設計的 Modal
+                對話框。
+            </div>
+            <div class="mt-3 text-end">
+                <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                >
+                    查看更多
+                </button>
+            </div>
+            <div
+                class="modal fade"
+                id="myModal"
+                tabindex="-1"
+                aria-labelledby="myModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="myModalLabel">
+                                Bootstrap Modal 深入介紹
+                            </h1>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>什麼是 Modal 對話框？</h5>
+                            <p>
+                                Modal
+                                對話框是現代網頁設計中不可或缺的互動元件之一。它能在不離開當前頁面的情況下，為用戶提供額外的內容展示或操作介面。這種設計模式特別適合需要用戶注意力集中的場景。
+                            </p>
+
+                            <h5>Modal 的主要特點：</h5>
+                            <ul>
+                                <li>
+                                    覆蓋層設計：當 Modal
+                                    開啟時，背景會自動變暗，有效引導用戶關注當前任務。
+                                </li>
+                                <li>
+                                    響應式佈局：自動適應不同螢幕尺寸，在手機等移動設備上也能完美展示。
+                                </li>
+                                <li>
+                                    豐富的自定義選項：可以設定大小、動畫效果、關閉方式等多種參數。
+                                </li>
+                                <li>
+                                    無障礙支援：內建支援鍵盤操作和螢幕閱讀器，確保所有用戶都能順利使用。
+                                </li>
+                            </ul>
+
+                            <h5>常見使用場景：</h5>
+                            <p>
+                                Modal 對話框在網頁應用中有廣泛的應用場景，例如：
+                            </p>
+                            <ol>
+                                <li>用戶登入和註冊表單</li>
+                                <li>圖片預覽和圖庫展示</li>
+                                <li>操作確認提示</li>
+                                <li>詳細資訊展示</li>
+                                <li>系統通知和警告</li>
+                            </ol>
+
+                            <h5>使用建議：</h5>
+                            <p>
+                                為了提供最佳的用戶體驗，使用 Modal
+                                時應注意以下幾點：
+                            </p>
+                            <ul>
+                                <li>
+                                    內容應簡潔明瞭，避免過多資訊造成用戶負擔
+                                </li>
+                                <li>提供清晰的關閉選項，讓用戶能輕鬆退出</li>
+                                <li>合理使用動畫效果，增強互動體驗</li>
+                                <li>確保移動端的可用性，按鈕大小要適中</li>
+                            </ul>
+
+                            <p>
+                                透過 Bootstrap
+                                框架，我們可以輕鬆實現這些功能，並確保在各種設備上都能提供一致的使用體驗。Modal
+                                對話框的靈活性和實用性，使它成為提升網頁互動性的重要工具。
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                            >
+                                關閉
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-dismiss="modal"
+                            >
+                                確認
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+    ></script>
+</html>
