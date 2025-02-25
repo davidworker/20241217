@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Event</title>
+        <style>
+            body {
+                font-family: "Helvetica Neue", Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f7fa;
+                color: #333;
+            }
+
+            h1 {
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 30px;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            #list {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .list-item {
+                background-color: white;
+                margin-bottom: 8px;
+                padding: 12px 15px;
+                border-radius: 4px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .list-item:hover {
+                background-color: #f0f7ff;
+                transform: translateX(5px);
+            }
+
+            .input-container {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            #new-item {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px 0 0 4px;
+                font-size: 16px;
+            }
+
+            #add-item {
+                background-color: #3498db;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.2s;
+            }
+
+            #add-item:hover {
+                background-color: #2980b9;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS Event 示範</h1>
+        <!-- 當我點到 li 的時候，會印出 li 的內容 -->
+        <!-- 需要可以新增項目，且新增項目也可以點擊 -->
+
+        <ul id="list">
+            <li class="list-item">項目 1</li>
+            <li class="list-item">項目 2</li>
+            <li class="list-item">項目 3</li>
+        </ul>
+        <!-- issue: 假設項目有 100 萬個，這樣效能會很差 -->
+        <!-- 擒賊先擒王 -->
+
+        <!-- 新增項目 -->
+        <div class="input-container">
+            <input type="text" id="new-item" placeholder="請輸入新項目..." />
+            <button id="add-item">新增</button>
+        </div>
+    </body>
+    <script src="js/demo_event.js"></script>
+</html>
